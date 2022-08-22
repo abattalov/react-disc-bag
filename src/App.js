@@ -1,11 +1,15 @@
 import React from 'react'
+import Navbar from './components/Navbar'
+import Interface from './components/Interface'
+
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>yeeee</h1>
+      <Navbar/>
+      <Interface/>
     </div>
   );
 }
