@@ -1,7 +1,6 @@
 import React from "react";
 import {useEffect} from 'react';
-
-var key = config.SECRET_API_KEY;
+import configData from './config.json'
 
 
 function BagContainer(){
@@ -11,7 +10,7 @@ function BagContainer(){
         const options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': key,
+                'X-RapidAPI-Key': configData.SECRET_API_KEY,
                 'X-RapidAPI-Host': 'disc-golf-discs.p.rapidapi.com'
             }
         };
