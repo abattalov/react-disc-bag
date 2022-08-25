@@ -1,4 +1,4 @@
-// import {createStore} from 'react-redux';
-// import reducer from './reducer';
+import {createStoreHook} from 'react-redux';
+import bagReducer from './bagReducer';
 
-// export default createStore(reducer);
+export default createStoreHook(bagReducer);

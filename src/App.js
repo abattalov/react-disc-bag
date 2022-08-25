@@ -5,6 +5,7 @@ import BagContainer from './components/BagContainer'
 import {Routes, Route} from 'react-router-dom'
 import DiscContainer from './components/DiscContainer'
 import Home from './components/Home'
+import BagForm from './components/BagForm'
 
 
 import './App.css';
@@ -17,8 +18,9 @@ function App() {
         <Route exact path='/' element={<Home/>}/>
         <Route path='/discs' element={<DiscContainer/>}/>
         <Route path='/bags' element={<BagContainer/>}/>
+        <Route path='/bags/new' element={<BagForm/>}/>
       </Routes>
-      <Interface/>
+      {/* <Interface/> */}
     </div>
   );
 }
