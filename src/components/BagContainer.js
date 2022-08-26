@@ -22,6 +22,12 @@ function BagContainer(){
 
     // }, [])
 
+    useEffect(() => {
+        fetch('http://localhost:3000/bags')
+        .then(resp => resp.json())
+        .then(bags => console.log(bags))
+    }, [])
+
     return(
         <div>
             <h1>BagContainer</h1>

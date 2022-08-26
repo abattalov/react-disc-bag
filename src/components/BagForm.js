@@ -3,6 +3,7 @@ import React from "react";
 function BagForm(){
     return(
         <div>
+            <h2>New Bag</h2>
             <form className='bag-form'>
                 <input
                     type='text'
@@ -10,6 +11,7 @@ function BagForm(){
                     name="bagName"
                     // value=''
                 />
+                <button>Add Bag</button>
             </form>
         </div>
     )

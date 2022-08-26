@@ -6,6 +6,8 @@ import {Routes, Route} from 'react-router-dom'
 import DiscContainer from './components/DiscContainer'
 import Home from './components/Home'
 import BagForm from './components/BagForm'
+import Footer from './components/footer'
+
 
 
 import './App.css';
@@ -21,6 +23,7 @@ function App() {
         <Route path='/bags/new' element={<BagForm/>}/>
       </Routes>
       {/* <Interface/> */}
+      <Footer/>
     </div>
   );
 }
