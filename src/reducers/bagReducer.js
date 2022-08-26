@@ -5,8 +5,13 @@ const initialState = {
 
 
 
-export default function bagReducer(state,action){
+export default function bagReducer(state=initialState,action){
     switch(action.type){
+        case "LOADING":
+            return {
+                ...state,
+                loading: true
+            }
         default:
             return state
     }

@@ -1,18 +1,27 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Interface from './components/Interface'
-import BagContainer from './components/BagContainer'
-import {Routes, Route} from 'react-router-dom'
-import DiscContainer from './components/DiscContainer'
-import Home from './components/Home'
-import BagForm from './components/BagForm'
-import Footer from './components/footer'
+import React from 'react';
+import Navbar from './components/Navbar';
+import Interface from './components/Interface';
+import BagContainer from './components/BagContainer';
+import {Routes, Route} from 'react-router-dom';
+import DiscContainer from './components/DiscContainer';
+import Home from './components/Home';
+import BagForm from './components/BagForm';
+import Footer from './components/footer';
+import {connect} from 'react-redux';
+import { getBags } from './actions';
 
 
 
 import './App.css';
 
-function App() {
+function App(props) {
+
+  if(props.loading){
+    return (
+      <h3>Loading...</h3>
+    )
+  }
+
   return (
     <div className="App">
       <Navbar/>
@@ -28,4 +37,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    loading: state.loading
+  }
+}
+
+export default connect(mapStateToProps,{getBags})(App);
