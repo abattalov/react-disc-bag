@@ -18,6 +18,12 @@ export default function bagReducer(state=initialState,action){
                 loading: false,
                 bags: action.bags
             }
+        case "ADD_BAG":
+            return {
+                ...state,
+                loading: false,
+                bags: [...state.bags, action.bag]
+            }
         default:
             return state
     }

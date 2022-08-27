@@ -1,6 +1,8 @@
 import React, {useState} from "react";
+import {connect} from 'react-redux';
+import { addBag } from "../actions";
 
-function BagForm(){
+function BagForm(props){
 
     const [state, setState] = React.useState({
         name: ''
@@ -15,7 +17,7 @@ function BagForm(){
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log(state)
+        props.addBag(state)
     }
 
     return(
@@ -37,4 +39,4 @@ function BagForm(){
     )
 }
 
-export default BagForm;
+export default connect(null,{addBag})(BagForm);
