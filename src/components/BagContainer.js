@@ -23,7 +23,7 @@ function BagContainer(props){
 
     // }, [])
 
-    const bags = props.bags.map((bag, i) => <Bag key={i} name={bag.name}/>)
+    const bags = props.bags.map((bag) => <Bag key={bag.id} id={bag.id} name={bag.name}/>)
 
     return(
         <div>

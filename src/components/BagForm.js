@@ -16,7 +16,7 @@ function BagForm(props){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        
         props.addBag(state)
     }
 
