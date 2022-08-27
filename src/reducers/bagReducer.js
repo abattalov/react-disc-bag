@@ -12,6 +12,12 @@ export default function bagReducer(state=initialState,action){
                 ...state,
                 loading: true
             }
+        case "GET_BAGS":
+            return {
+                ...state,
+                loading: false,
+                bags: action.bags
+            }
         default:
             return state
     }

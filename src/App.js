@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Navbar from './components/Navbar';
 import Interface from './components/Interface';
 import BagContainer from './components/BagContainer';
@@ -15,6 +15,10 @@ import { getBags } from './actions';
 import './App.css';
 
 function App(props) {
+
+  useEffect(() =>{
+    props.getBags();
+  },[props.state])
 
   if(props.loading){
     return (

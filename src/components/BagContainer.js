@@ -1,9 +1,10 @@
 import React from "react";
-import {useEffect} from 'react';
 import configData from './config.json'
+import Bag from './Bag'
+import { connect } from "react-redux";
 
 
-function BagContainer(){
+function BagContainer(props){
 
     // useEffect(() => {
         
@@ -22,17 +23,20 @@ function BagContainer(){
 
     // }, [])
 
-    useEffect(() => {
-        fetch('http://localhost:3000/bags')
-        .then(resp => resp.json())
-        .then(bags => console.log(bags))
-    }, [])
+    const bags = props.bags.map((bag, i) => <Bag key={i} name={bag.name}/>)
 
     return(
         <div>
             <h1>BagContainer</h1>
+            {bags}
         </div>
     )
 }
 
-export default BagContainer;
+const mapStateToProps = state => {
+    return {
+        bags: state.bags
+    }
+}
+
+export default connect(mapStateToProps)(BagContainer);
