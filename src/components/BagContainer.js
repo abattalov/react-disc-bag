@@ -1,5 +1,5 @@
 import React from "react";
-import configData from './config.json'
+// import configData from './config.json'
 import Bag from './Bag'
 import { connect } from "react-redux";
 

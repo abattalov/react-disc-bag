@@ -1,8 +1,11 @@
 import React, {useState} from "react";
 import {connect} from 'react-redux';
 import { addBag } from "../actions";
+import {useNavigate} from 'react-router-dom';
 
 function BagForm(props){
+
+    let navigate = useNavigate();
 
     const [state, setState] = React.useState({
         name: ''
@@ -16,8 +19,8 @@ function BagForm(props){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
         props.addBag(state)
+        navigate('/bags')
     }
 
     return(

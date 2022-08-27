@@ -9,6 +9,7 @@ import BagForm from './components/BagForm';
 import Footer from './components/footer';
 import {connect} from 'react-redux';
 import { getBags } from './actions';
+import BagCard from './components/BagCard';
 
 
 
@@ -31,8 +32,9 @@ function App(props) {
       <Navbar/>
       <Routes>
         <Route exact path='/' element={<Home/>}/>
-        <Route path='/discs' element={<DiscContainer/>}/>
-        <Route path='/bags' element={<BagContainer/>}/>
+        <Route exact path='/discs' element={<DiscContainer/>}/>
+        <Route exact path='/bags' element={<BagContainer/>}/>
+        <Route path='/bags/:id' element={<BagCard/>}/>
         <Route path='/bags/new' element={<BagForm/>}/>
       </Routes>
       {/* <Interface/> */}
