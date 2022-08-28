@@ -1,16 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {useParams} from 'react-router-dom'
+import DiscForm from './DiscForm';
 
 function BagCard(props) {
 
   let params = useParams();
-
-  // props.bags.forEach(element => {
-  //   if(element.id === parseInt(params.id)){
-  //     console.log(element)
-  //   }
-  // });
 
   const bag = props.bags.find(bag => bag.id === parseInt(params.id))
 
@@ -45,6 +40,7 @@ function BagCard(props) {
           </tbody>
           ))}
         </table>
+        <DiscForm/>
     </div>
   )
 }
