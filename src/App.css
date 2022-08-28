@@ -38,3 +38,16 @@ nav {
   padding: 10px;
   row-gap: 10px;
 }
+
+.disc-table{
+  justify-content: space-evenly;
+  border: 1px solid;
+  margin: auto;
+
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+}
